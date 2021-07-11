@@ -62,6 +62,9 @@ module.exports = {
       .then((decodedToken) => {
         authDetails.expiresIn = decodedToken.exp - decodedToken.iat;
         authDetails.localId = decodedToken.uid;
+        authDetails.name = decodedToken.name;
+        authDetails.role = decodedToken.role;
+        authDetails.email = decodedToken.email;
         return res.json(authDetails);
       })
       .catch((err) => {
