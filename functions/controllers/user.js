@@ -108,7 +108,7 @@ module.exports = {
       .get()
       .then((data) => {
         data.forEach((doc) => {
-          console.log(req.user);
+          //console.log(req.user);
           if (doc.data().id !== req.user.uid) {
             userList.push(doc.data());
           }
